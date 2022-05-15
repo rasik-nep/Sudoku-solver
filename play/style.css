@@ -6,7 +6,7 @@
 body {
   font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
   overflow: hidden;
-  background-color: rgb(37, 36, 36);
+  background-color: rgb(203, 196, 196);
 }
 a {
   text-decoration: none;
@@ -51,19 +51,25 @@ hr {
 }
 
 #error {
-  color: coral;
+  color: red;
+  position: relative;
+  top: 2em;
+  left: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+
 }
 
 #playBoard {
-  width: 450px;
+  width: 435px;
   height: 450px;
 
-  /* background-color: yellow; */
+  background-color: rgb(87, 85, 85);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  top: 5em;
+  top: 13em;
 }
 
 .tile {
@@ -83,12 +89,13 @@ hr {
   width: 450px;
   height: 50px;
   font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
   /* background-color: yellow; */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  top: 10em;
+  top: 13em;
 }
 
 .numbers {

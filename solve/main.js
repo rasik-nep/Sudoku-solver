@@ -209,6 +209,7 @@ function boxesGood(board){
 
 function updateBoard(board) {
     let solution=[];
+    document.getElementById("error").innerHTML = "";
     if (board == false){ 
         return;
     }else{
@@ -259,13 +260,22 @@ function inputIsInvalid(){
         for (let j=0;j<9;j++){
             if (document.getElementById(i.toString()+"-"+j.toString())!=null){
                 var elem = document. getElementById(i.toString()+"-"+j.toString());
-                elem. remove();
+                elem.remove();
             }
         }
     }
-    document.getElementById("error").innerHTML += "<h3>Cannot be solved.</h3>";
-    document.getElementById("error").innerHTML += "<h3>Please enter correct values.</h3>";
+    document.getElementById("error").innerHTML = "<h3>Cannot be solved.</h3><h3>Please enter correct values.</h3>";
+    // document.getElementById("error").innerHTML += "<h3>Please enter correct values.</h3>";
     let e = document.getElementById("error");
-    e.classList.add("errors")
+    e.classList.add("errors");
+
+    // let err = Document.createElement("h3");
+    // err.append("Cannot be solved.")
+    // err.setAttribute("id","err");
+    // // err.innerHTML +="<h3></h3>";
+    // // document.getElementById("error").remove();
+    // let e = document.getElementById("error");
+    // e.append(err);
+    // e.classList.add("errors")
 }
 
