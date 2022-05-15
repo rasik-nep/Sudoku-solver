@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--META TAGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudoku solver</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!--BOOTSTRAP CDN-->
+</head>
+
+<body>
+<header>
+    <a href="#" class="logo">Sudoku</a>
+    <nav>
+        <ul class="menu">
+            <li><a href="../home.html">Home</a></li>
+            <li><a class = 'active'href="input.html">Solve</a></li>
+            <li><a href="../play/index.html">Play</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- create the board -->
+
+    <div id="initialBoard">
+        <input id="1" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="2" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="3" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="4" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="5" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="6" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="7" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="8" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="9" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="10" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="11" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="12" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="13" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="14" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="15" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="16" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="17" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="18" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="19" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="20" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="21" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="22" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="23" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="24" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="25" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="26" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="27" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="28" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="29" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="30" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="31" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="32" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="33" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="34" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="35" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="36" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="37" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="38" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="39" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="40" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="41" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="42" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="43" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="44" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="45" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="46" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="47" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="48" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="49" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="50" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="51" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="52" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="53" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="54" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="55" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="56" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="57" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="58" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="59" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="60" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="61" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="62" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="63" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="64" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="65" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="66" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="67" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="68" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="69" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="70" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="71" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="72" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+        <input id="73" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="74" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="75" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="76" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="77" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="78" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="79" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="80" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <input id="81" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');">
+        <br>
+    </div>
+    <h2 id="error"></h2>
+    <div id="playBoard"></div>
+    <button onclick="initiate()" class="bn3637 bn36">View solution</button>
+    <br>
+    <script src="main.js"> 
+    </script>
+</body>
+
+</html>

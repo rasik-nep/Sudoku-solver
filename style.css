@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+.active,
+.btn:hover {
+  color: rgb(165, 243, 145);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 70px;
+}
+.logo {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+nav a {
+  margin: 0 15px;
+  font-size: 2rem;
+  transition: color 0.4s ease;
+}
+nav a:hover {
+  color: crimson;
+}
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(37, 36, 36);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  font-size: 3rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: crimson;
+  margin-right: 10px;
+  transition: opacity 0.4s ease;
+}
+.btn:hover {
+  opacity: 0.6;
+}

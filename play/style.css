@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  overflow: hidden;
+  background-color: rgb(37, 36, 36);
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+.active,
+.btn:hover {
+  color: rgb(165, 243, 145);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 70px;
+}
+.logo {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+nav a {
+  margin: 0 15px;
+  font-size: 2rem;
+  transition: color 0.4s ease;
+}
+nav a:hover {
+  color: crimson;
+}
+hr {
+  width: 500px;
+}
+
+#error {
+  color: coral;
+}
+
+#playBoard {
+  width: 450px;
+  height: 450px;
+
+  /* background-color: yellow; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 5em;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  /* text */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#digits {
+  width: 450px;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: yellow; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10em;
+}
+
+.numbers {
+  width: 44px;
+  height: 44px;
+  border: 2.5px solid black;
+  margin: 0.5px;
+  /* text */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberSelected {
+  background-color: grey;
+}
+
+.tile-start {
+  background-color: whitesmoke;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid black;
+}
+
+.vertical-line {
+  border-right: 1px solid black;
+}
+
+.bn3637 {
+  position: relative;
+  top: 15rem;
+  left: 45%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(2, 0, 0);
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+  margin: 15px;
+  background-color: rgb(143, 140, 140);
+}
+
+.bn36 {
+  border-color: #fff;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
